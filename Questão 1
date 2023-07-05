@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void){
+
+    int linhas, colunas;
+    printf ("Digite o n° de linhas e colunas \n");
+    scanf("%d", &linhas, colunas);
+
+    int * matriz = (int*) malloc (linhas, colunas*sizeof(int));
+    if (matriz==NULL){
+        printf("Erro de alocação \n ");
+        exit(1);
+    } 
+    else {
+        printf(" Alocação realizada com sucesso \n");
+
+        // Recebe elementos inserido pelo user
+        int contador;
+        printf( "Digite os valores da matriz: \n");
+        
+        for (contador=0; contador<tamanho; contador++){
+            scanf("%d", &matriz[contador]);
+        }
+    }
+
+    for (contador = tamanho+1; contador>0; contador++);
+        printf("%d", matriz[contador]);
+        free(vetor);
+    return 0;
+} 
+
+}
