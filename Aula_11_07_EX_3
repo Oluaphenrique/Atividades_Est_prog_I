@@ -1,0 +1,41 @@
+#include <stdlib.h>
+#include <stdio.h>
+
+struct banco{
+    char nome[20];
+    int agencia;
+    int numerodaconta;
+    int senha;
+    float saldo;
+
+};
+typedef struct banco;
+int main(void){
+
+    struct banco var_banco[5];
+
+    int indice;
+    for (indice=0; indice<5; indice++){
+
+    printf("Digite o nome \n");
+    scanf(" %[^\n]", var_banco[indice].nome);
+
+    printf(" Digite a agencia \n");
+    scanf(" %d", &var_banco[indice].agencia);
+
+    printf("Digite a sua numero da conta \n");
+    scanf (" %d", &var_banco[indice].numerodaconta);
+
+    printf("Digite a sua senha \n");
+    scanf (" %d", &var_banco[indice].senha);
+
+     printf("Digite a sua senha \n");
+    scanf (" %f", &var_banco[indice].saldo);
+
+    printf ("Os dados informados: \n  Nome: %s \t agencia: %d numero da conta: %d  senha: %d saldo: %f", var_banco[indice].nome, var_banco[indice].agencia, var_banco[indice].numerodaconta, var_banco[indice].senha, var_banco[indice].saldo);
+
+
+    }
+    return 0;
+}
+    
