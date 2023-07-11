@@ -21,6 +21,7 @@ int main(void){
     printf("Digite a sua matricula \n");
     scanf ("%d", &var_aluno.matricula);
 
+    printf ("Os dados informados: \n  Nome: %s \t Idade: %d matricula: %d", var_aluno.aluno, var_aluno.idade, var_aluno.matricula);
 
 
 
