@@ -1,0 +1,28 @@
+#include <stdlib.h>
+#include <stdio.h>
+
+struct pessoa{
+
+    char nome[20];
+    int idade;
+    int rg;
+
+};
+typedef struct pessoa;
+int main(void){
+
+    struct aluno var_aluno;
+    printf("Digite o nome \n");
+    scanf(" % [\n], var_pessoa.nome");
+
+    printf(" Digite a idade \n");
+    scanf(" %d, &var_pessoa.idade \n");
+
+    printf("Digite a sua matricula \n");
+    scanf ("%d", &var_pessoa.rg);
+
+    printf ("Os dados informados: \n  Nome: %s \t Idade: %d matricula: %d", var_pessoa.nome, var_pessoa.idade, var_pessoa.rg);
+
+
+
+    return 0;
