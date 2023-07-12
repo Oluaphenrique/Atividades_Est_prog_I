@@ -26,6 +26,7 @@ typedef struct aluno {
 
 int main (void){
 
+// Aluno * aluno = (Aluno *) malloc (sizeof(Aluno));
         Aluno * aluno = (Aluno*) malloc(sizeof(Aluno));
         if (aluno==NULL){
             printf("Sem memoria \n");
