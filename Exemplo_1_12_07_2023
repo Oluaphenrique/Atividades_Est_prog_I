@@ -16,13 +16,17 @@ typedef struct aluno {
 int main (void){
 
         Aluno * aluno = (Aluno*) malloc(sizeof(Aluno));
+        if (aluno==NULL){
+            printf("Sem memoria \n");
+            exit(1);
+        }
 
 printf("Digite o nome \n ");
 scanf(" %[^\n], aluno.nome");
 printf("Digite a natricula \n ");
 scanf(" %d, &aluno->matricula");
 
-
+free(aluno);
 return 0;
 
 
