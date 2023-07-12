@@ -23,11 +23,13 @@ typedef struct aluno {
 
 
 }Aluno;
+//Aluno * cadastra_aluno(void);
+void printf(Aluno *aluno);
 
 int main (void){
 
 Aluno * aluno = cadastra_aluno();
-
+printf(aluno);
 print("Dados: /n Nome: %s \n Matricula: %d \n Disciplina: %s \n, aluno->nome, aluno->matricula, aluno->disciplina->nome);
 
 
