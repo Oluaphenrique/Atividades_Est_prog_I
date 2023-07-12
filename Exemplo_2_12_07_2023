@@ -26,6 +26,15 @@ typedef struct aluno {
 
 int main (void){
 
+Aluno * aluno = cadastra_aluno();
+
+print("Dados: /n Nome: %s \n Matricula: %d \n Disciplina: %s \n, aluno->nome, aluno->matricula, aluno->disciplina->nome);
+
+
+free(aluno->disciplina);
+free(aluno);
+
+
 // Aluno * aluno = (Aluno *) malloc (sizeof(Aluno));
         Aluno * aluno = (Aluno*) malloc(sizeof(Aluno));
         if (aluno==NULL){
