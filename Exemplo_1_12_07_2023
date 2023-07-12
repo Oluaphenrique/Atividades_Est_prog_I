@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+// Structs e ponteiros 
+
+
+typedef struct aluno {
+
+    char nome [20];
+    int matricula;
+
+
+
+}Aluno;
+
+int main (void){
+
+        Aluno * aluno = (Aluno*) malloc(sizeof(Aluno));
+
+printf("Digite o nome \n ");
+scanf(" %[^\n], aluno.nome");
+printf("Digite a natricula \n ");
+scanf(" %d, &aluno->matricula");
+
+
+return 0;
+
+
+}
