@@ -3,12 +3,23 @@
 
 // Structs e ponteiros 
 
+typedef struct disciplina {
+
+    char nome [30];
+    float nota;
+}Disciplina
+
+
+{
+    /* data */
+};
+
 
 typedef struct aluno {
 
     char nome [20];
     int matricula;
-
+    Disciplina disciplina;
 
 
 }Aluno;
@@ -22,11 +33,15 @@ int main (void){
         }
 
 printf("Digite o nome \n ");
-scanf(" %[^\n], aluno.nome");
+scanf(" %[^\n], aluno->nome");
 printf("Digite a natricula \n ");
 scanf(" %d, &aluno->matricula");
+printf ("Digite o nome da disciplina \n");
+scanf(" %[^\n]", aluno->disciplina.nome)
+printf("Dados: \n Nome: %s \n Matricula: %d \n Disciplina: %s \n, aluno->nome, aluno->matricula, aluno->disciplina.nome")
 
-free(aluno);
+
+free(aluno)
 return 0;
 
 
