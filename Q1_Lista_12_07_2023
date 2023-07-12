@@ -1,0 +1,34 @@
+#include <stdlib.h>
+#include <stdio.h>
+
+struct funcionario{
+
+    char nome[30];
+    float  salario;
+    int identificador;
+    char cargo;
+
+};
+
+int main(void){
+
+    struct funcionario var_funcionario;
+    printf("Digite o nome \n");
+    scanf(" %[^\n], var_funcionario.nome");
+
+    printf(" Digite salario \n");
+    scanf(" %d, &var_funcionario.salario \n");
+
+    printf("Digite a sua identificador \n");
+    scanf ("%d", &var_funcionario.identificador);
+
+    printf("Digite seu cargo \n");
+    scanf( "%[^\n]", var_funcionario.cargo);
+
+    printf ("Os dados informados: \n  Nome: %f \t salario: %d identificador: %d Cargo \n", var_funcionario.nome, var_funcionario.salario, var_funcionario.identificador, var_funcionario.cargo);
+
+
+
+    return 0;
+
+}
