@@ -1,0 +1,44 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+
+\\ cadastro de funcionario
+\\ definir Struct para representar funcionario
+Struct funcionario {
+
+    char nome[20];
+    int idade;
+    float salario;
+    char cargo[20];
+};
+typerdef funcionario Funcionario;
+
+void cadastraFuncionario(Funcionario * vetor_funcionarios, int qnt_funcionarios){
+    \\ Função que cadastra funcionario
+    int indice
+    for (indice=0, indice< qnt_funcionarios; indice++){
+    
+    printf("Digite o nome: \n");
+    scanf(" %[^\n],", vetor_funcionarios[indice].nome);
+    
+    printf("Digite a idade: \n");
+    scanf(" %d,", &vetor_funcionarios[indice].idade);
+    
+    printf("Digite o nome: \n");
+    scanf(" %f,", &vetor_funcionarios[indice].salario);
+    
+    printf("Digite o cargo: \n");
+    scanf(" %[^\n],", &vetor_funcionarios[indice].cargo);
+    }
+}
+int main(void){
+    int quantidade_funcionarios;
+    printf("Digite a quantidade de funcionarios que deseja cadastra no sistema\n");
+    scanf ("%d", %quantidade_funcionarios);
+    Funcionarios * vetor = (Funcionario*) malloc(quantidade_funcionarios) if (vetor==NULL){
+        printf("Não há memoria!! \n");
+        exit(1);
+
+    }
+    return 0;
+}
