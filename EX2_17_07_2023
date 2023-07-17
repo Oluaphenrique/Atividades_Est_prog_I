@@ -1,0 +1,59 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+
+\\ cadastro de funcionario
+\\ definir Struct para representar funcionario passo 1
+Struct funcionario {
+
+    char nome[20];
+    int idade;
+    float salario;
+    char cargo[20];
+};
+typerdef funcionario Funcionario;
+
+Funcionario * cadastraFuncionario(void){
+    \\ Função que cadastra funcionario
+    int qnt_funcionarios;
+    printf("Informe a quantidade de funcionarios a ser cadastrados \n");
+    scanf("%d", %qnt_funcionarios);
+    funcionario * vetor_funcionarios = (Funcionario*) malloc(qnt_funcionarios*sizeof)
+    if (vetor ==NULL){
+    printf("Não há memoria!! \n");
+    }
+    int indece;
+    for (indice=0, indece< qnt_funcionarios; indice++){
+
+    printf("Digite o nome: \n");
+    scanf(" %[^\n],", vetor_funcionarios[indice].nome);
+    
+    printf("Digite a idade: \n");
+    scanf(" %d,", &vetor_funcionarios[indice].idade);
+    
+    printf("Digite o nome: \n");
+    scanf(" %f,", &vetor_funcionarios[indice].salario);
+    
+    printf("Digite o cargo: \n");
+    scanf(" %[^\n],", &vetor_funcionarios[indice].cargo);
+    }
+}
+return vetor_funcionarios;
+}
+
+// 3 passo - Função que imprime os dados de funcioanrios cadastrados 
+
+void imprimeFuncionarios(Funcionario * vetor_funcionarios, int qnt_funcionarios){
+    int indece;
+    printf("\n\n Dados dos funcionarios\n\n");
+    for (indice=0; indice<qnt_funcionarios; indice++){
+        printf ("Nome: %s \t Idade: %d \t Salario: %2f \t Cargo%s \n", vetor_funcionarios[indice].nome, vetor_funcionarios[indice].idade, vetor_funcionarios[indice].salario, vetor_funcionarios[indice].cargo);
+    }
+}
+
+int main(void){
+    Funcionario * vetor = cadastraFuncionario();
+    imprimeFuncionarios(vetor_funcionarios, 3);
+    return 0;
+
+}
