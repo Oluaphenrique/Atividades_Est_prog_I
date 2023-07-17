@@ -1,0 +1,61 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+
+\\ cadastro de cliente
+\\ definir Struct para representar funcionario passo 1
+Struct funcionario {
+
+    char nomedocliente[30];
+    int agencia;
+    int numerodaconta;
+    float saldo;
+    
+};
+typerdef cliente Cliente;
+
+Cliente * cadastraCliente(void){
+    \\ Função que cadastra funcionario
+    int qnt_cliente;
+    printf("Informe a quantidade de cliente a ser cadastrados \n");
+    scanf("%d", %qnt_cliente);
+    cliente * vetor_cliente = (Cliente*) malloc(qnt_cliente*sizeof)
+    if (vetor ==NULL){
+    printf("Não há memoria!! \n");
+    }
+    int indece;
+    for (indice=0, indece< qnt_cliente; indice++){
+
+    printf("Digite o nome: \n");
+    scanf(" %[^\n],", vetor_cliente[indice].nomedocliente);
+    
+    printf("Digite a idade: \n");
+    scanf(" %d,", &vetor_funcionarios[indice].agencia);
+
+    printf("Digite a idade: \n");
+    scanf(" %d,", &vetor_funcionarios[indice].numerodaconta);
+    
+    printf("Digite o nome: \n");
+    scanf(" %f,", &vetor_funcionarios[indice].saldo);
+    
+    }
+}
+return vetor_cliente;
+}
+
+// 3 passo - Função que imprime os dados de funcioanrios cadastrados 
+
+void imprimeClientes(Cliente * vetor_cliente, int qnt_cliente){
+    int indece;
+    printf("\n\n Dados dos clientes\n\n");
+    for (indice=0; indice<qnt_cliente; indice++){
+        printf ("Nome: %s \t Agencia: %d \t Numero da conta: %d \t Saldo%f \n", vetor_cliente[indice].nomedocliente, vetor_cliente[indice].agencia, vetor_cliente[indice].numerodaconta, vetor_cliente[indice].saldo);
+    }
+}
+
+int main(void){
+    Cliente * vetor = cadastraCliente();
+    imprimeClientes(vetor_cliente, 3);
+    return 0;
+
+}
