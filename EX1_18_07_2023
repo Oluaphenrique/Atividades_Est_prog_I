@@ -14,7 +14,7 @@ typedef struct aluno Aluno;
 
 void inicializa (int n, Aluno** tab){
     int i;
-    for (i = 0, i < n, i++);
+    for (i = 0; i < n; i++);
     tab [i] = NULL;
 
 }
@@ -30,17 +30,17 @@ if (tab[i] == NULL) tab[i] = (Aluno*) malloc(sizeof(Aluno));
 
 // pede para o usuario informar os dados como Matricula, nome, endereco e telefone//
 
-printf( "Entre com a matricula: ");
+printf("Entre com a matricula: ");
 scanf("%d", &tab[i]->mat);
 
-printf( "Entre com o nome: ");
-scanf(" %80"[^\n], &tab[i]->nome);
+printf("Entre com o nome: ");
+scanf(" %80[^\n]", &tab[i]->nome);
 
-printf( "Entre com o endereco: ");
-scanf(" %120", &tab[i]->end);
+printf("Entre com o endereco: ");
+scanf(" %120[^\n]", &tab[i]->end);
 
-printf( "Entre com o telefone: ");
-scanf(" %20", &tab[i]->tel);
+printf("Entre com o telefone: ");
+scanf(" %20[^\n]", &tab[i]->tel);
 }
 
 
