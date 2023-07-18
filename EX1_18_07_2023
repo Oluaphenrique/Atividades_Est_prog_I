@@ -1,0 +1,94 @@
+#include <stdlib.h>
+#include <stdio.h>
+// struct aluno para armazenamento de dados matricula, nome, endereço e telefone //
+struct aluno{
+    int mat;
+    char nome [81];
+    char end [121];
+    char tel [21];
+
+};
+// Usada para chamar a struct//
+
+typedef struct aluno Aluno;
+
+void inicializa (int n, Aluno** tab){
+    int i;
+    for (i = 0, i < n, i++);
+    tab [i] = NULL;
+
+}
+
+void preenche (int n, Aluno** tab, int i){
+    if (i < 0 || i>= n){    
+    printf("Indica fora do limite do vetor. \n ");
+    exit (1);
+
+}
+
+if (tab[i] == NULL) tab[i] = (Aluno*) malloc(sizeof(Aluno));
+
+// pede para o usuario informar os dados como Matricula, nome, endereco e telefone//
+
+printf( "Entre com a matricula: ");
+scanf("%d", &tab[i]->mat);
+
+printf( "Entre com o nome: ");
+scanf(" %80"[^\n], &tab[i]->nome);
+
+printf( "Entre com o endereco: ");
+scanf(" %120", &tab[i]->end);
+
+printf( "Entre com o telefone: ");
+scanf(" %20", &tab[i]->tel);
+}
+
+
+// fazer a exclusao de todos os dados quando o aluno for excluido //
+
+
+void retira (int n, Aluno** tab, int i){
+    if (i < 0 || i >= n){
+        printf("Indice fora do limite do vetor .\n ");
+        exit(1);
+
+    }
+    if (tab[i] !=NULL){
+        free (tab[i]);
+        tab[i] = NULL;
+    }
+}
+// fazer a impressao apos os dados do aluno tenha sido excluido // 
+
+void imprime (int n, Aluno** tab, int i){
+    if (i < 0 || i >= n){
+        printf("Indice fora do limite do vetor .\n");
+        exit(1);
+    }
+    if (tab[i] != NULL){
+        printf("Matricula: %d\n", tab[i]->mat);
+        printf("Nome: %s\n", tab[i]->nome);
+        printf("Endereco: %s\n", tab[i]->end);
+        printf("Telefone: %s\n", tab[i]->tel);
+
+    }
+}
+
+void imprime_tudo (int n, Aluno** tab){
+    int i;
+    for (i = 0; i < n; i++) imprime (n, tab, i);
+}
+// após ser chamado a função main, o progrma ira inicializar e pedir para ser preenchido o dados de 3 alunos, depois vai exibir os dados e no final vai apagar os dados informado. 
+
+int main(void){
+    Aluno* tab[10];
+    inicializa(10, tab);
+    preenche (10, tab, 0);
+    preenche (10, tab, 1);
+    preenche (10, tab, 2);
+    imprime_tudo(10, tab);
+    retira(10, tab ,0);
+    retira(10, tab ,1);
+    retira(10, tab ,2);
+    return 0;
+}
