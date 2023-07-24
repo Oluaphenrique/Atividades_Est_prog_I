@@ -50,12 +50,12 @@ int main(void){
         printf("Informe o IRT: ");
        scanf ("%d", &aluno->ia.IRT);
         break;
-        
+
        default:
        break;
     }
 
-    printf ("Dados informados: \n Nome: %s\t Matricula:%d\t Curso: %s\t ");
+    printf ("Dados informados: \n Nome: %s\t Matricula:%d\t Curso: %s\t Indice: %f", aluno->nome, aluno->matricula, aluno->curso, aluno->indice.IG);
 
 return 0;
 }
