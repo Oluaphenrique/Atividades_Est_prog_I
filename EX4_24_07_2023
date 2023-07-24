@@ -1,0 +1,35 @@
+#include <stdlib.h>
+#include <stdio.h>
+
+#define TRUE 1
+#define FALSE 0
+/*
+Enumeração (enum)
+enum bool {
+    false,
+    true
+}
+
+*/
+enum boolean{false, true};
+
+typedef enum boolean Bool;
+
+int main (void){
+
+   Bool val;
+    printf("Digite 0 ou 1 \n");
+    scanf("%d", &val);
+    printg("Valor informado: %d", val);
+
+    if (val ==true){
+    printf("Verdadeiro \n");
+    }
+
+    else {
+        printf("False");
+
+    }
+
+    return 0;
+}
