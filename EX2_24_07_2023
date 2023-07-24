@@ -1,0 +1,58 @@
+#include <stdlib.h>
+#include <stdio.h>
+
+union ia{
+    float IG;
+    float IRA;
+    float IRT;
+
+}
+typedef ia IA;
+
+struct aluno{
+    char nome[30];
+    int matricula;
+    char curso [30];
+    IA indice
+
+};
+typedef aluno Aluno;
+
+int main(void){
+
+    Aluno aluno; 
+    int op;
+    printf("Digite o nome \n");
+    scanf(" %[^\n], aluno.nome");
+
+    printf("Digite a matricula \n");
+    scanf ("%d", &aluno.matricula);
+
+    printf("Digite o nome do curso: \n");
+    scanf ("%[^\n], &aluno.curso");
+
+    printf ("Digite: \n 0 - IG \n 1 - IRA \n 2- IRT");
+    scanf("%d", &op);
+
+    switch(op){
+       case 0:
+       printf("Informe o IG: ");
+       scanf ("%d", &aluno.ia.IG);
+       break;
+
+       case 1: 
+        printf("Informe o IRA: ");
+       scanf ("%d", &aluno.ia.IRA);
+       break;
+
+       case 2:
+        printf("Informe o IRT: ");
+       scanf ("%d", &aluno.ia.IRT);
+
+       break;
+       default:
+       break;
+    }
+
+return 0;
+}
