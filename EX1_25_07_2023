@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct pessoa{
+    
+    nome;
+    idade;
+    genero;
+
+
+};
+typedef struct Pessoa;
+
+enum gen {MASCULINO, FEMININO};
+typedef enum gen Gen;
+
+int main (void){
+    
+Gen va;
+
+printf("Digite seu nome: ");
+scanf("%[^\n]", &nome);
+
+printf("Digite sua idade: ");
+scanf("%d", &idade );
+
+printf("digite seu genero: ");
+scanf("%d", &va);
+
+if (va == MASCULINO){
+    printf("MASCULINO ");
+}
+
+if (va == FEMININO){
+    printf ("FEMININO ");
+
+}
+
+return 0;
+}
