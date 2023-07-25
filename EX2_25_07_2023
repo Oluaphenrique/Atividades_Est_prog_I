@@ -3,9 +3,9 @@
 
 struct union produto{
 
-    alimento [51];
-    bebida [51];
-    eletronico [51];
+    char alimento [51];
+    char bebida [51];
+   char  eletronico [51];
 
 
 };
@@ -15,22 +15,22 @@ typedef struct union produto Produto;
 struct pro{
 
     int preco;
-    char nome;
+    Produto prod;
     
 };
 typedef struct pro Pro;
 
 
 int main (void){
-
-Pro, pro;
+char nome [51];
+Pro pro;
 char op;
 
 printf ("Digite o preço do produto: ");
 scanf("%d", &pro.preco);
 
-printf("Digite o tipo do produto: ");
-scanf("%[^n]", &pro.tipo);
+printf("Digite o nome: ");
+scanf("%[^n]", nome);
 
 
 printf ("Digite: \n 0 - alimento \n 1 - bebida \n 2- eletronico \n");
