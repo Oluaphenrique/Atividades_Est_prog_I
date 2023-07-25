@@ -1,0 +1,25 @@
+#include < stdio.h>
+#include <stdlib.h>
+
+union data{
+    int dia;
+    char mes;
+    int ano;
+
+};
+
+typedef union data Data;
+
+int main(void){
+printf("Informe o dia");
+scanf("%d",);
+
+printf("Informe o mes");
+scanf("%[^n], );
+
+printf("Informe o ano");
+scnaf("d", );
+
+return 0;
+}
+
